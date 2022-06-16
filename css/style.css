@@ -1,0 +1,220 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  padding-top: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 5000px;
+}
+
+/* img는 인라인이기 때문에 베이스라인을 가져서 아랫부분에 약간 공백이 생기 떄문에 해줌 */
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.inner {
+  max-width: 1200px;
+  min-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  background: #f6f5f0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+#logo{
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+#logo img{
+  width: 100%;
+}
+
+header > .inner{
+  display: flex;
+  width: 1440px;
+  height: 100px;
+  align-items: center;
+}
+
+header .sub-menu {
+  position: absolute;
+  right: 50px;
+}
+header .sub-menu .menu{
+  display: flex;
+  align-items: center;
+  
+}
+header .sub-menu .menu li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .sub-menu .menu >li a {
+  display: flex;
+  padding: 0 5px;
+}
+
+header .search {
+  height: 34px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .search input {
+  width: 36px;
+  height: 34px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  transition: width 400ms;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+header .search input:focus {
+  width: 190px;
+}
+
+header .search>div {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 200ms;
+}
+
+header .search.focused>div {
+  opacity: 0;
+}
+
+header .main-menu {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+}
+
+header .item{
+  padding: 40px 10px;
+  position: relative;
+}
+
+header .item::before{
+  content: "";
+  width: 1px;
+  height: 14px;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+header .item:nth-child(2)::before{
+  display: none;
+}
+
+header .item__name {
+  padding: 0 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+header .item__contents {
+  width: 100%;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  display: none;
+}
+
+header .item:hover .item__contents {
+  display: block;
+}
+
+header .item .item__contents .contents__menu {
+  background: #f6f5f0;
+  padding: 0 0;
+}
+
+header .item .item__contents .contents__menu .inner {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+header .item .item__contents .contents__menu .inner > li {
+  width: 350px;
+  text-align: center;
+}
+header .item .item__contents .contents__menu .inner > li:first-child{
+  margin-left: 70px;
+}
+
+header .item .item__contents .contents__menu .inner > li ul li {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #777;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+header .item .item__contents .contents__menu .inner > li ul li:hover{
+  color: #333;
+  font-weight: 700;
+}
+
+.visual {
+  position: relative;
+  height: 830px;
+}
+.visual .swiper{
+  width: 1440px;
+  height: 830px;
+  position: absolute;  
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alarose {
+  background-image: url(../imgs/pexels-dmitry-zvolskiy-1721942.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: red;
+  height: 1400px;
+  position: relative;
+}
+.alarose .inner {
+  height: 1000px;
+  position: relative;
+  top: 12.5%;
+}
