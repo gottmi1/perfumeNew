@@ -12,7 +12,11 @@ searchInputEl.addEventListener("focus", () => {
 
 searchInputEl.addEventListener("blur", () => {
   searchEl.classList.remove("focused");
+  searchInputEl.value = "";
   searchInputEl.setAttribute("placeholder", "");
+  if (scrollY > 0) {
+    searchEl.style.opacity = "0.5";
+  }
 });
 
 new Swiper(".visual .swiper", {
@@ -38,4 +42,42 @@ innerSpyEls.forEach((el) => {
   })
     .setClassToggle(el, "show") // toggle할 요소 , "클래스명" == replace
     .addTo(new ScrollMagic.Controller());
+});
+
+const header = document.querySelector("header");
+
+window.addEventListener("wheel", () => {
+  if (scrollY > 0) {
+    header.style.backgroundColor = "rgba(246, 245, 240, 0.8)";
+    if (searchEl.classList.contains("focused")) {
+      searchInputEl.style.opacity = "1";
+    } else {
+      searchInputEl.style.opacity = "0.5";
+    }
+  } else {
+    header.style.backgroundColor = "rgba(246, 245, 240, 1)";
+    searchEl.style.opacity = "1";
+  }
+});
+
+header.addEventListener("mouseover", () => {
+  header.style.backgroundColor = "rgba(246, 245, 240, 1)";
+  searchEl.style.opacity = "1";
+});
+header.addEventListener("mouseout", () => {
+  if (scrollY === 0) {
+    searchEl.style.opacity = "1";
+  } else {
+    if (searchEl.classList.contains("focused")) {
+      searchEl.style.opacity = "1";
+    } else {
+      searchEl.style.opacity = "0.5";
+    }
+  }
+
+  header.style.backgroundColor = "rgba(246, 245, 240, .8)";
+});
+searchEl.addEventListener("mouseover", () => {
+  searchEl.style.opacity = "1";
+  searchInputEl.style.opacity = "1";
 });

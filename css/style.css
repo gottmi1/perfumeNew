@@ -10,7 +10,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 15000px;
+  height: auto;
 }
 
 /* img는 인라인이기 때문에 베이스라인을 가져서 아랫부분에 약간 공백이 생기 떄문에 해줌 */
@@ -63,7 +63,7 @@ a {
 }
 
 header {
-  background: #f6f5f0;
+  background: rgba(246, 245, 240, 1);
   position: fixed;
   width: 100%;
   top: 0;
@@ -321,3 +321,131 @@ header .item .item__contents .contents__menu .inner > li ul li:hover{
   height: 800px;
   position: relative;
 }
+
+.alarose-product .inner {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.alarose-title {
+  height: 350px;
+  color: white;
+  padding: 50px 0;
+  margin-bottom: 100px;
+}
+.alarose-title .inner{
+  position: relative;
+  width: 1440px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.alarose-title .text-group{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.alarose-title .text-group .title {
+  width: 405px;
+  height: 89px;
+  margin: 0 auto;
+}
+.alarose-product {
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.baccarat {
+  padding-top: 300px;
+  background-image: url(../imgs/baccarat.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 800px;
+  position: relative;
+}
+.baccarat .inner {
+  height: 800px;
+  position: relative;
+}
+
+.baccarat-title .inner {
+  height: 450px;
+}
+
+.baccarat-title .text-group{
+  display: flex;
+  justify-content: space-between;
+  padding-top : 40px;
+}
+.baccarat-title .text-group .title {
+  width: 400px;
+  height: 160px;
+  margin: 0 auto;
+}
+.baccarat-product {
+  height: auto;
+  padding-bottom: 150px;
+}
+
+.baccarat-product .inner {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+
+footer {
+  background-color: #353535;
+  border-top: 1px solid #333;
+}
+
+footer .inner{
+  padding: 50px 0 70px 0;
+  height: auto;
+}
+
+footer .menu{
+  display: flex;
+  justify-content: center;
+}
+
+footer .menu div{
+  position: relative;
+  width: 19%;
+  text-align: center;
+}
+
+footer .menu div span {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+footer .menu div a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px;
+  display: block;
+}
+
+footer .menu div a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
