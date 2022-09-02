@@ -13,7 +13,6 @@ body {
   height: auto;
 }
 
-/* img는 인라인이기 때문에 베이스라인을 가져서 아랫부분에 약간 공백이 생기 떄문에 해줌 */
 img {
   display: block;
 }
